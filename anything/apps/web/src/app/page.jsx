@@ -43,8 +43,6 @@ import {
 } from "lucide-react";
 import { Logos3 } from "@/components/ui/logos3";
 import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
-import { FeaturesSectionWithBentoGrid } from "@/components/ui/feature-section-with-bento-grid";
-
 function useScrollReveal() {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);

@@ -43,6 +43,9 @@ import {
 } from "lucide-react";
 import { Logos3 } from "@/components/ui/logos3";
 import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
+import { ImageCarouselHero } from "@/components/ui/ai-image-generator-hero";
+import { InteractiveRobotSpline } from "@/components/ui/interactive-3d-robot";
+
 function useScrollReveal() {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -927,10 +930,50 @@ export default function LandingPage() {
           <Logos />
           <Services />
           <CaseStudies />
+          <ImageCarouselHero
+            title="Transforming Ideas Into Intelligent Solutions"
+            subtitle="Our Portfolio"
+            description="From AI-powered platforms to enterprise software — explore the solutions we've built for businesses across industries."
+            ctaText="Start Your Project"
+            onCtaClick={() => window.location.href = '/contact'}
+            images={[
+              { id: "1", src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&q=80&auto=format&fit=crop", alt: "IT consulting strategy session", rotation: -15 },
+              { id: "2", src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80&auto=format&fit=crop", alt: "Software development team", rotation: -8 },
+              { id: "3", src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&q=80&auto=format&fit=crop", alt: "Client workshop and planning", rotation: 5 },
+              { id: "4", src: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=900&q=80&auto=format&fit=crop", alt: "Data analytics dashboard", rotation: 12 },
+              { id: "5", src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&q=80&auto=format&fit=crop", alt: "AI and machine learning", rotation: -12 },
+              { id: "6", src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80&auto=format&fit=crop", alt: "Collaborative engineering team", rotation: 8 },
+              { id: "7", src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=80&auto=format&fit=crop", alt: "Technology infrastructure", rotation: -5 },
+              { id: "8", src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80&auto=format&fit=crop", alt: "Business analytics and reporting", rotation: 10 },
+            ]}
+            features={[
+              { title: "Enterprise-Grade Quality", description: "Battle-tested solutions built for scale, security, and performance." },
+              { title: "Rapid Delivery", description: "From concept to deployment in weeks, not months." },
+              { title: "Industry Expertise", description: "Deep domain knowledge across healthcare, finance, retail, and IT." },
+            ]}
+          />
           <Benefits />
           <Pricing />
           <Testimonials />
           <FAQ />
+          <section className="relative w-full overflow-hidden">
+            <div className="text-center pt-24 pb-8 px-4 md:px-8">
+              <div className="w-full max-w-2xl mx-auto">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                  Meet Whobee, Our AI Assistant
+                </h2>
+                <p className="text-gray-400 text-lg md:text-xl">
+                  Interact with our 3D AI companion — a glimpse into the intelligent solutions we build for enterprises.
+                </p>
+              </div>
+            </div>
+            <div className="relative w-full h-[70vh] [&>div>canvas+div]:!hidden">
+              <InteractiveRobotSpline
+                scene="https://prod.spline.design/PyzDhpQ9E5f1E3MT/scene.splinecode"
+                className="absolute inset-0 z-0"
+              />
+            </div>
+          </section>
           <CTA />
         </main>
         <Footer />
@@ -945,6 +988,8 @@ export default function LandingPage() {
         @keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fadeIn { animation: fadeIn 0.2s ease-out; }
         html { scroll-behavior: smooth; }
+        [data-logo="spline"] { display: none !important; }
+        a[href*="spline.design"] { display: none !important; }
       `}</style>
     </div>
   );

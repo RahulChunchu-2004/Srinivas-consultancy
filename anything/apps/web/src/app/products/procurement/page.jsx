@@ -1,7 +1,16 @@
-
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Contact, FileCheck2, PieChart } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Procurement & Purchase System — Vendors, POs & Spend",
+    description:
+      "Streamline sourcing, purchase orders, approvals, and spend analytics with TelivAI’s procurement platform built for control and speed.",
+    path: "/products/procurement",
+  });
+}
 
 const features = [
   {

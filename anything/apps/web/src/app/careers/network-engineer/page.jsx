@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowLeft, Check, MapPin, Clock, Network, DollarSign, HeartPulse, BookOpen, Shield } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Careers: Network Engineer — Enterprise LAN/WAN & Cloud",
+    description:
+      "Architect and operate enterprise networks, SD-WAN, and security appliances. Monitoring, automation, and on-call excellence at TelivAI.",
+    path: "/careers/network-engineer",
+  });
+}
 
 const responsibilities = [
   "Design, implement, and maintain enterprise LAN/WAN architectures across multiple data centers and offices",

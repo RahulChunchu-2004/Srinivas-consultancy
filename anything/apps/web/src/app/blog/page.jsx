@@ -1,5 +1,16 @@
 import React from "react";
 import PageLayout from "@/components/PageLayout";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Blog — AI Automation & Business Insights",
+    description:
+      "Insights on AI automation, sales pipeline efficiency, customer support, analytics, and scaling startups with intelligent systems from TelivAI Solutions.",
+    path: "/blog",
+    ogType: "article",
+  });
+}
 
 export default function BlogPage() {
   const posts = [

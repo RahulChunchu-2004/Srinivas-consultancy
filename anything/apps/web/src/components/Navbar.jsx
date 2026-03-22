@@ -90,6 +90,7 @@ const navItems = [
       { label: "Our Mission", href: "/about", icon: <Target size={16} /> },
     ],
   },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -123,13 +124,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between overflow-visible px-6 py-4">
-        <a href="/" className="flex h-10 shrink-0 items-center overflow-visible pr-3 sm:pr-4">
+        <a href="/" className="flex h-10 shrink-0 items-center overflow-visible pr-1 sm:pr-6 md:pr-10 lg:pr-12">
           <img
             src="/images/telivai-logo.png"
             alt="TelivAI Solutions"
-            className="block h-10 w-auto max-w-[200px] object-contain object-left origin-left scale-[1.55] sm:max-w-[230px] sm:scale-[1.65] md:max-w-[260px] md:scale-[1.72]"
-            width={260}
-            height={42}
+            className="block h-10 w-auto max-w-[260px] object-contain object-left origin-left scale-[2.55] sm:max-w-[300px] sm:scale-[2.75] md:max-w-[340px] md:scale-[2.95] lg:scale-[3.1]"
+            width={340}
+            height={54}
           />
         </a>
 

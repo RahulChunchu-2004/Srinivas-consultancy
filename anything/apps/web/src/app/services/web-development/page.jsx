@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Globe, MonitorSmartphone, ShoppingCart, FileCode2, Plug, Gauge } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Web Development — Full-Stack Apps, E-Commerce & APIs",
+    description:
+      "Responsive web apps, e-commerce, portals, and integrations using modern frameworks—secure, scalable delivery with TelivAI.",
+    path: "/services/web-development",
+  });
+}
 
 const bentoItems = [
   { title: "Full-Stack Development", desc: "End-to-end web applications with modern frameworks — React, Next.js, Node, and beyond.", large: true, image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80&auto=format&fit=crop" },

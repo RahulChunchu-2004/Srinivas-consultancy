@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Smartphone, Layers, Palette, Server, TrendingUp, Wrench } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Mobile App Development — Native iOS, Android & Cross-Platform",
+    description:
+      "Native and React Native / Flutter mobile apps with strong UX, performance, and release discipline—product teams from TelivAI.",
+    path: "/services/mobile-development",
+  });
+}
 
 const bentoItems = [
   { title: "iOS & Android", desc: "Native applications built with Swift, Kotlin, and platform-specific best practices for peak performance.", large: true, image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80&auto=format&fit=crop" },

@@ -1,5 +1,15 @@
 import { ArrowUpRight, FileHeart, Video, BarChart3, ShieldCheck, Wifi, Workflow } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Healthcare Technology — EHR, Telemedicine & HIPAA-Ready Systems",
+    description:
+      "EHR integration, telemedicine, patient analytics, IoMT, and workflow automation—compliant healthcare software with TelivAI.",
+    path: "/industries/healthcare",
+  });
+}
 
 export default function Healthcare() {
   const features = [

@@ -248,6 +248,7 @@ app.use('/api/auth/*', async (c, next) => {
   }
   return next();
 });
+
 app.route(API_BASENAME, api);
 
 export default await createHonoServer({

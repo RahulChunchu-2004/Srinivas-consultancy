@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowLeft, Check, MapPin, Clock, Database, DollarSign, HeartPulse, BookOpen, Wifi } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Careers: Data Engineer — Pipelines, Warehousing & Streaming",
+    description:
+      "Design ETL/ELT, warehouses, and real-time data systems with TelivAI. Kafka, Spark, dbt, and cloud data stacks.",
+    path: "/careers/data-engineer",
+  });
+}
 
 const responsibilities = [
   "Design and maintain scalable ETL/ELT pipelines that process terabytes of data daily with high reliability",

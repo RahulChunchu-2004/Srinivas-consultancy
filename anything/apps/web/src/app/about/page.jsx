@@ -8,6 +8,16 @@ import {
   Globe2,
 } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "About Us — Who We Are, Vision & Mission",
+    description:
+      "TelivAI Solutions empowers businesses with AI products, IT staffing, and custom software. Learn our vision, mission, and how we partner with enterprises worldwide.",
+    path: "/about",
+  });
+}
 
 export default function AboutPage() {
   return (

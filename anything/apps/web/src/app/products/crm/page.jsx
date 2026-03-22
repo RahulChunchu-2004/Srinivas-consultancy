@@ -1,7 +1,16 @@
-
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Kanban, MailCheck, TrendingUp } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "CRM Platform — Pipelines, Automation & Customer Insights",
+    description:
+      "TelivAI CRM: pipeline management, email automation, and revenue analytics—nurture leads and grow accounts with a unified customer view.",
+    path: "/products/crm",
+  });
+}
 
 const features = [
   {

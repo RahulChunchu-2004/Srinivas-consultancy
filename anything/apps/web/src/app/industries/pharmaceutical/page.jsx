@@ -1,5 +1,15 @@
 import { ArrowUpRight, BrainCircuit, ClipboardList, Scale, Truck, FlaskRound, Eye } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Pharmaceutical & Life Sciences — R&D, Trials & Compliance",
+    description:
+      "AI-assisted discovery, clinical trial systems, regulatory compliance, supply chain traceability, and quality analytics for pharma.",
+    path: "/industries/pharmaceutical",
+  });
+}
 
 export default function Pharmaceutical() {
   const features = [

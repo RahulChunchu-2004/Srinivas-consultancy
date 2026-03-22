@@ -1,6 +1,16 @@
 import React from "react";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Contact Us — Talk to Our Team",
+    description:
+      "Reach TelivAI Solutions for AI development, staffing, and enterprise software projects. Send a message and we will respond quickly.",
+    path: "/contact",
+  });
+}
 
 export default function ContactPage() {
   return (

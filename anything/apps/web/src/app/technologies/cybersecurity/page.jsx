@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Shield, Search, ClipboardCheck, AlertTriangle, Lock, FileCheck, Radar, Check, ArrowRight } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Cyber Security — Pentesting, Zero Trust & Incident Response",
+    description:
+      "Penetration testing, audits, SOC workflows, zero-trust architecture, and compliance-aligned security engineering.",
+    path: "/technologies/cybersecurity",
+  });
+}
 
 const capabilities = [
   { icon: Search, title: "Penetration Testing", description: "Ethical hacking and red-team exercises to uncover vulnerabilities before attackers do." },

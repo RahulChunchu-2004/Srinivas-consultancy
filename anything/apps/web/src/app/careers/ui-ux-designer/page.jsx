@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowLeft, Check, MapPin, Clock, Palette, DollarSign, HeartPulse, BookOpen, Coffee } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Careers: UI/UX Designer — Research, Systems & Product Design",
+    description:
+      "Own research through handoff: flows, prototypes, design systems, and accessibility. Figma-first product design at TelivAI.",
+    path: "/careers/ui-ux-designer",
+  });
+}
 
 const responsibilities = [
   "Conduct user research including interviews, surveys, and usability testing to uncover pain points and opportunities",

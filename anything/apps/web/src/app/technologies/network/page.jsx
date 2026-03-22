@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Network, Wifi, Cloud, ShieldCheck, Activity, RotateCcw, Check, ArrowRight } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Network Engineering — Architecture, SD-WAN & Cloud Networking",
+    description:
+      "Enterprise network design, SD-WAN, cloud connectivity, automation, monitoring, and disaster recovery from TelivAI.",
+    path: "/technologies/network",
+  });
+}
 
 const capabilities = [
   { icon: Network, title: "Network Architecture", description: "End-to-end network design with high availability, redundancy, and future-proof topology." },

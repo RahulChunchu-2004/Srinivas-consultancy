@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowLeft, Check, MapPin, Clock, Code2, DollarSign, HeartPulse, BookOpen, Users } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Careers: Java Developer — Spring Boot, Microservices & APIs",
+    description:
+      "Enterprise Java with Spring Boot, cloud-native patterns, and Kafka. TelivAI builds mission-critical backends for global clients.",
+    path: "/careers/java-developer",
+  });
+}
 
 const responsibilities = [
   "Design and develop enterprise-grade microservices using Spring Boot, Spring Cloud, and Java 17+",

@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowLeft, Check, MapPin, Clock, Brain, DollarSign, HeartPulse, BookOpen, Timer } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Careers: AI/ML Engineer — Hyderabad, Full-Time",
+    description:
+      "Build production ML, NLP, and computer vision systems at TelivAI. Strong Python, TensorFlow/PyTorch, and MLOps experience preferred.",
+    path: "/careers/ai-ml-engineer",
+  });
+}
 
 const responsibilities = [
   "Design and develop production-ready ML models for classification, regression, and recommendation systems",

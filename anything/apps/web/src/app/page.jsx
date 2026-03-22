@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import Lottie from "lottie-react";
+import LottieImport from "lottie-react";
+
+/** CJS/SSR interop: default import can be `{ default: Lottie }` instead of the component. */
+const Lottie = LottieImport?.default ?? LottieImport;
 import businessmanRocketAnimation from "@/assets/lottie/businessman-rocket.json";
 import workManagementAnimation from "@/assets/lottie/work-management.json";
 import growthBusinessPullSalesAnimation from "@/assets/lottie/growth-business-pull-sales.json";
@@ -27,6 +30,16 @@ import { ImageCarouselHero } from "@/components/ui/ai-image-generator-hero";
 import { InteractiveRobotSpline } from "@/components/ui/interactive-3d-robot";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Enterprise AI, Custom Software & IT Staffing",
+    description:
+      "Build autonomous AI systems, enterprise CRM and ERP, mobile apps, and web platforms with TelivAI Solutions—plus elite IT staffing and intelligent automation.",
+    path: "/",
+  });
+}
 
 function useScrollReveal() {
   const ref = useRef(null);

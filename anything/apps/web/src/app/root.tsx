@@ -32,9 +32,35 @@ import { useNavigate } from 'react-router';
 import { serializeError } from 'serialize-error';
 import { Toaster, toast } from 'sonner';
 import { useDevServerHeartbeat } from '../__create/useDevServerHeartbeat';
+import type { MetaDescriptor } from 'react-router';
 import type { Route } from './+types/root';
+import { DEFAULT_DESCRIPTION, SITE_NAME, absoluteUrl, defaultOgImageUrl } from './seo/site';
+import { jsonLdMeta, organizationAndWebsiteGraph } from './seo/jsonld';
 
 export const links = () => [];
+
+export function meta(): MetaDescriptor[] {
+  const title = SITE_NAME;
+  const description = DEFAULT_DESCRIPTION;
+  const canonical = absoluteUrl('/');
+  const og = defaultOgImageUrl();
+  return [
+    { title },
+    { name: 'description', content: description },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: description },
+    { property: 'og:url', content: canonical },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: og },
+    { property: 'og:site_name', content: SITE_NAME },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: title },
+    { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: og },
+    { tagName: 'link', rel: 'canonical', href: canonical },
+    jsonLdMeta(organizationAndWebsiteGraph()),
+  ];
+}
 
 if (globalThis.window && globalThis.window !== undefined) {
   globalThis.window.fetch = fetch;
@@ -245,30 +271,6 @@ class ErrorBoundaryWrapper extends Component<ErrorBoundaryProps, ErrorBoundarySt
   }
 }
 
-function LoaderWrapper({ loader }: { loader: () => React.ReactNode }) {
-  return <>{loader()}</>;
-}
-
-type ClientOnlyProps = {
-  loader: () => React.ReactNode;
-};
-
-export const ClientOnly: React.FC<ClientOnlyProps> = ({ loader }) => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
-
-  return (
-    <ErrorBoundaryWrapper>
-      <LoaderWrapper loader={loader} />
-    </ErrorBoundaryWrapper>
-  );
-};
-
 /**
  * useHmrConnection()
  * ------------------
@@ -442,7 +444,7 @@ export function Layout({ children }: { children: ReactNode }) {
         {LoadFontsSSR ? <LoadFontsSSR /> : null}
       </head>
       <body>
-        <ClientOnly loader={() => children} />
+        <ErrorBoundaryWrapper>{children}</ErrorBoundaryWrapper>
         <Toaster position={isMobile ? 'top-center' : 'bottom-right'} />
         <ScrollRestoration />
         <Scripts />

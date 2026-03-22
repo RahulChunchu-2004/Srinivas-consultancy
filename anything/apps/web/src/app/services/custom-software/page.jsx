@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Code2, Cloud, RefreshCw, Link2, ShieldCheck, HeartHandshake } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Custom Software Development — Enterprise & Cloud-Native",
+    description:
+      "Bespoke enterprise applications, microservices, integrations, and legacy modernization on AWS, Azure, or GCP with TelivAI.",
+    path: "/services/custom-software",
+  });
+}
 
 const bentoItems = [
   { title: "Enterprise Apps", desc: "Robust, scalable applications designed for complex business workflows and high-volume operations.", large: true, image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&auto=format&fit=crop" },

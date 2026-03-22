@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Brain, Cpu, MessageSquare, Eye, Gamepad2, Settings2, Sparkles, Check, ArrowRight } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "AI & Machine Learning Engineering — Deep Learning, NLP & Vision",
+    description:
+      "Deep learning, NLP, computer vision, generative AI, and MLOps—production-grade ML systems from TelivAI’s engineering practice.",
+    path: "/technologies/ai-ml",
+  });
+}
 
 const capabilities = [
   { icon: Brain, title: "Deep Learning", description: "Neural networks for complex pattern recognition, from CNNs to transformers at scale." },

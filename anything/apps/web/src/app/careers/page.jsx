@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Brain, Database, Shield, Network, Palette, Code2, Monitor, TrendingUp, Lightbulb, Heart } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Careers — Join TelivAI Solutions",
+    description:
+      "Open roles in AI/ML, data engineering, networking, cybersecurity, design, and software development. Learn our culture and hiring process in Hyderabad and beyond.",
+    path: "/careers",
+  });
+}
 
 const positions = [
   { icon: Brain, title: "AI/ML Engineer", location: "Hyderabad", type: "Full-time", href: "/careers/ai-ml-engineer", description: "Design intelligent systems using machine learning, NLP, and computer vision to solve complex problems at scale." },

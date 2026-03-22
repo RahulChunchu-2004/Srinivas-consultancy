@@ -115,6 +115,10 @@ if (import.meta.env.DEV) {
 const tree = buildRouteTree(__dirname);
 // `*?` breaks downstream tooling (invalid regex `(*)` on Vercel). Use a splat segment.
 const notFound = route('*', './__create/not-found.tsx');
-const routes = [...generateRoutes(tree), notFound];
+const seoRoutes: RouteConfigEntry[] = [
+	route('robots.txt', './robots.txt/route.tsx'),
+	route('sitemap.xml', './sitemap.xml/route.tsx'),
+];
+const routes = [...generateRoutes(tree), ...seoRoutes, notFound];
 
 export default routes;

@@ -1,5 +1,15 @@
 import { ArrowUpRight, PackageSearch, Sparkles, TrendingUp, Layers, Users, Truck } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Retail & E-Commerce — Personalization, Inventory & Omnichannel",
+    description:
+      "Inventory AI, personalization, demand forecasting, unified commerce, and customer intelligence for modern retail brands.",
+    path: "/industries/retail",
+  });
+}
 
 export default function Retail() {
   const features = [

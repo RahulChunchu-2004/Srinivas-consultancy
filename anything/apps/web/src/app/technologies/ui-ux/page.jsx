@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Palette, Users, PenTool, Layers, MousePointerClick, FlaskConical, Component, Check, ArrowRight } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "UI/UX Design — Research, Design Systems & Usability",
+    description:
+      "User research, prototyping, visual design, interaction design, usability testing, and scalable design systems.",
+    path: "/technologies/ui-ux",
+  });
+}
 
 const capabilities = [
   { icon: Users, title: "User Research", description: "Interviews, surveys, and analytics that uncover real user needs and pain points." },

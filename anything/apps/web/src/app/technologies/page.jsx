@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowRight, Brain, BarChart3, Network, Shield, Palette, Rocket, Users, Clock, HeartHandshake } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Technologies — AI/ML, Data, Networking, Security & UX",
+    description:
+      "Deep expertise across AI and ML, data and analytics, network engineering, cybersecurity, and UI/UX—modern stacks for enterprise-grade delivery.",
+    path: "/technologies",
+  });
+}
 
 const technologies = [
   { title: "AI / ML", href: "/technologies/ai-ml", icon: Brain, image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop", description: "Intelligent systems powered by deep learning, NLP, and computer vision." },

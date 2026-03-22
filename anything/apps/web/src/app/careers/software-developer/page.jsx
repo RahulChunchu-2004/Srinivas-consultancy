@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowLeft, Check, MapPin, Clock, Monitor, DollarSign, HeartPulse, BookOpen, Wifi } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Careers: Software Developer — Full-Stack React, Node & Quality",
+    description:
+      "Ship features across React, Next.js, and Node with strong testing culture. Join TelivAI’s product engineering team in Hyderabad.",
+    path: "/careers/software-developer",
+  });
+}
 
 const responsibilities = [
   "Build and ship full-stack features using React, Next.js, and Node.js across web and mobile platforms",

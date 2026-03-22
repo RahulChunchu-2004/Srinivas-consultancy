@@ -1,5 +1,15 @@
 import PageLayout from "@/components/PageLayout";
 import { FileText, Search, Users, Award, Rocket } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Hiring Process — How We Interview at TelivAI",
+    description:
+      "From application to offer: screening, technical conversations, culture fit, and onboarding—what to expect when you apply to TelivAI.",
+    path: "/careers/hiring-process",
+  });
+}
 
 const steps = [
   {

@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Search, ShieldCheck, Repeat, Briefcase, UserCheck, Settings } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "IT Staffing & Consulting — Vetted Technical Talent",
+    description:
+      "Contract, contract-to-hire, and full-time IT staffing with rigorous vetting—scale engineering, cloud, and product teams with TelivAI.",
+    path: "/services/staffing",
+  });
+}
 
 const bentoItems = [
   { title: "Talent Sourcing", desc: "We tap into deep networks and AI-powered screening to find the exact technical talent your team needs.", large: true, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80&auto=format&fit=crop" },

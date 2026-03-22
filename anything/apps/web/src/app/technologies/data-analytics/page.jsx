@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Database, Activity, PieChart, BarChart3, GitBranch, ShieldCheck, Check, ArrowRight } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Data & Analytics — Warehousing, Real-Time BI & Governance",
+    description:
+      "Data warehousing, streaming analytics, BI, ETL/ELT, and governance—modern data platforms engineered by TelivAI.",
+    path: "/technologies/data-analytics",
+  });
+}
 
 const capabilities = [
   { icon: Database, title: "Data Warehousing", description: "Scalable, cloud-native data warehouses optimized for analytical workloads and cost efficiency." },

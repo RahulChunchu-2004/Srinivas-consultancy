@@ -1,7 +1,16 @@
-
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Bot, Users, Building2, ShoppingCart, Zap, Brain, Plug } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Enterprise Products — AI Agents, CRM, ERP & Procurement",
+    description:
+      "Explore TelivAI product suites: AI agents, CRM, ERP, and procurement platforms built for automation, scale, and enterprise operations.",
+    path: "/products",
+  });
+}
 
 const products = [
   {

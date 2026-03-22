@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Users, Brain, Smartphone, Globe, Code2, Zap, Trophy, Handshake } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "IT Services — Staffing, AI, Mobile, Web & Custom Software",
+    description:
+      "IT staffing, AI development, mobile and web engineering, and custom software from TelivAI Solutions—delivery-focused teams for enterprise and growth-stage companies.",
+    path: "/services",
+  });
+}
 
 const services = [
   {

@@ -1,5 +1,15 @@
 import { ArrowUpRight, Monitor, HeartPulse, FlaskConical, Landmark, ShoppingCart } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Industries We Serve — IT, Healthcare, Pharma, Finance & Retail",
+    description:
+      "TelivAI delivers AI, software, and staffing solutions for IT and engineering, healthcare, pharmaceutical, finance, and retail—tailored to regulated and high-scale environments.",
+    path: "/industries",
+  });
+}
 
 export default function Industries() {
   const industries = [

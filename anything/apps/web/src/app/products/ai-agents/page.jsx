@@ -1,7 +1,16 @@
-
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, MessageSquare, Clock, BarChart3 } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "AI Agents — Conversational Automation & NLP",
+    description:
+      "Deploy intelligent AI agents with NLP, 24/7 automation, and analytics—customer support, sales, and operations on TelivAI’s enterprise-ready platform.",
+    path: "/products/ai-agents",
+  });
+}
 
 const features = [
   {

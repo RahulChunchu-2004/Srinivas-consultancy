@@ -1,7 +1,16 @@
-
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Landmark, UserCog, Truck } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "ERP System — Finance, HR, Inventory & Operations",
+    description:
+      "Unify finance, HR, inventory, and supply chain on TelivAI’s ERP—real-time reporting, compliance, and operational visibility for enterprises.",
+    path: "/products/erp",
+  });
+}
 
 const features = [
   {

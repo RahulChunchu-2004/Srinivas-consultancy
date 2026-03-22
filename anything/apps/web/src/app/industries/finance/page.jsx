@@ -1,5 +1,15 @@
 import { ArrowUpRight, ShieldAlert, TrendingUp, BarChart3, FileText, Smartphone, CreditCard } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Financial Services Technology — Fraud, Risk & Digital Banking",
+    description:
+      "Fraud detection, trading and risk platforms, RegTech, mobile banking, and payment innovation for banks and fintechs.",
+    path: "/industries/finance",
+  });
+}
 
 export default function Finance() {
   const features = [

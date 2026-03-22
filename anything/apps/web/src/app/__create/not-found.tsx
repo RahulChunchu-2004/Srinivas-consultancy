@@ -1,11 +1,24 @@
 import type { Route } from './+types/not-found';
-import { useNavigate } from 'react-router';
+import { data, useNavigate } from 'react-router';
+import { SITE_NAME } from '@/app/seo/site';
 import AnimatedGradientBackground from '@/components/ui/animated-gradient-background';
 
 export async function loader({ params }: Route.LoaderArgs) {
-  return {
-    path: `/${params['*']}`,
-  };
+  const splat = params['*'] ?? '';
+  const path = splat ? `/${splat.replace(/^\/+/, '')}` : '/';
+  return data({ path }, { status: 404 });
+}
+
+export function meta() {
+  return [
+    { title: `Page not found | ${SITE_NAME}` },
+    {
+      name: 'description',
+      content:
+        'This URL is not on TelivAI Solutions. Return home for AI development, enterprise products, IT staffing, and contact options.',
+    },
+    { name: 'robots', content: 'noindex' },
+  ];
 }
 
 export default function NotFoundPage({

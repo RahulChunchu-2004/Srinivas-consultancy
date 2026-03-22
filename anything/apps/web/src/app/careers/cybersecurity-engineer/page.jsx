@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowLeft, Check, MapPin, Clock, Shield, DollarSign, HeartPulse, BookOpen, Home } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "Careers: Cyber Security Engineer — AppSec & Incident Response",
+    description:
+      "Pentesting, hardening, and IR at TelivAI. Help clients meet SOC 2 / ISO 27001 expectations with hands-on security engineering.",
+    path: "/careers/cybersecurity-engineer",
+  });
+}
 
 const responsibilities = [
   "Conduct penetration testing and vulnerability assessments across web applications, APIs, and infrastructure",

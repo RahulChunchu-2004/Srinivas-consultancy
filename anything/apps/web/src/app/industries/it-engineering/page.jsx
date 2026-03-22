@@ -1,5 +1,15 @@
 import { ArrowUpRight, Laptop, Cloud, GitBranch, RefreshCw, BrainCircuit, ShieldCheck } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "IT & Engineering Solutions — Cloud, DevOps & Security",
+    description:
+      "Digital transformation, cloud migration, DevOps, AI integration, and secure SDLC for technology and engineering organizations.",
+    path: "/industries/it-engineering",
+  });
+}
 
 export default function ITEngineering() {
   const features = [

@@ -1,6 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowUpRight, Brain, MessageSquare, Eye, BarChart3, GitBranch, Bot } from "lucide-react";
+import { pageMeta } from "@/app/seo/buildPageMeta";
+
+export function meta() {
+  return pageMeta({
+    title: "AI Development — ML, NLP, Computer Vision & MLOps",
+    description:
+      "Custom models, NLP, computer vision, predictive analytics, and MLOps—from discovery to production with TelivAI’s AI engineering teams.",
+    path: "/services/ai-development",
+  });
+}
 
 const bentoItems = [
   { title: "Custom ML Models", desc: "Purpose-built machine learning models trained on your data for classification, prediction, and optimization.", large: true, image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop" },

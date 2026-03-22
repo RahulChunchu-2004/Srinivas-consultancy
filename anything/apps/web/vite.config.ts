@@ -87,10 +87,18 @@ export default defineConfig({
   clearScreen: false,
   server: {
     allowedHosts: true,
-    host: '0.0.0.0',
+    // Use IPv4 loopback explicitly. On Windows, `host: 'localhost'` often binds
+    // only to [::1]; clients resolving localhost to 127.0.0.1 then get
+    // ERR_CONNECTION_REFUSED (Cursor Simple Browser, curl, etc.).
+    host: '127.0.0.1',
     port: 4000,
+    strictPort: true,
+    origin: 'http://127.0.0.1:4000',
     hmr: {
       overlay: false,
+      host: '127.0.0.1',
+      port: 4000,
+      clientPort: 4000,
     },
     warmup: {
       clientFiles: ['./src/app/**/*', './src/app/root.tsx', './src/app/routes.ts'],

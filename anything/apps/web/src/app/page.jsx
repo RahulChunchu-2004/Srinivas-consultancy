@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
+import Lottie from "lottie-react";
+import businessmanRocketAnimation from "@/assets/lottie/businessman-rocket.json";
+import workManagementAnimation from "@/assets/lottie/work-management.json";
+import growthBusinessPullSalesAnimation from "@/assets/lottie/growth-business-pull-sales.json";
+import robotProcessAutomationAnimation from "@/assets/lottie/robot-process-automation.json";
+import businessGoalPlanningAnimation from "@/assets/lottie/business-goal-planning.json";
 import {
   ArrowUpRight,
   Check,
   Zap,
-  Bot,
-  BarChart3,
   Clock,
-  MessageSquare,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -203,33 +206,13 @@ const Services = () => {
 
       <AnimatedSection>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative bg-zinc-900 rounded-3xl border border-white/5 p-6 shadow-2xl overflow-hidden hover:border-white/10 transition-all duration-500">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="px-3 py-1 bg-white/5 rounded-lg text-xs text-white border border-white/10">All Tasks</div>
-              <div className="px-3 py-1 text-xs text-gray-500">Waiting for approval</div>
-            </div>
-            <div className="space-y-4">
-              {[
-                { title: "Payroll management", status: "Due on 2nd july", icon: <Bot size={16} /> },
-                { title: "Employee Tracking", status: "2 days ago", icon: <Clock size={16} /> },
-                { title: "Social media post", status: "Cancelled by user", icon: <MessageSquare size={16} />, color: "text-red-400" },
-                { title: "Lead list", status: "70% prepared", icon: <BarChart3 size={16} /> },
-                { title: "Payment reminder", status: "sent to selected clients", icon: <Zap size={16} /> },
-              ].map((task, i) => (
-                <div key={i} className="flex items-center justify-between p-4 bg-white/5 rounded-2xl border border-white/5 hover:bg-white/[0.08] transition-colors">
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-gray-400">{task.icon}</div>
-                    <div>
-                      <div className="text-sm font-medium text-white">{task.title}</div>
-                      <div className={`text-xs ${task.color || "text-gray-500"}`}>{task.status}</div>
-                    </div>
-                  </div>
-                  <div className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center">
-                    <Check size={10} className="text-gray-500" />
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="relative flex items-center justify-center min-h-[280px] md:min-h-[380px]">
+            <Lottie
+              animationData={businessmanRocketAnimation}
+              loop
+              className="w-full max-w-[420px] mx-auto"
+              aria-label="Workflow automation animation"
+            />
           </div>
           <div>
             <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-[#a855f7] mb-6">Workflow Automation</div>
@@ -259,62 +242,26 @@ const Services = () => {
               <div className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white">Many more</div>
             </div>
           </div>
-          <div className="order-1 md:order-2 relative bg-zinc-900 rounded-3xl border border-white/5 p-8 shadow-2xl flex flex-col items-center justify-center min-h-[400px] hover:border-white/10 transition-all duration-500">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#a855f7]/10 to-transparent rounded-3xl"></div>
-            <div className="relative z-10 w-full max-w-sm">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-5 mb-4">
-                <p className="text-gray-400 text-sm mb-4">What can I help with?</p>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-gray-500 mb-4">
-                  Weather you want help in customer handling or make changes in your system just give me command
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-400">Add document</span>
-                  <span className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-400">Analyze</span>
-                  <span className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-400">Generate Image</span>
-                  <span className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-400">research</span>
-                </div>
-              </div>
-            </div>
+          <div className="order-1 md:order-2 relative flex items-center justify-center min-h-[320px] md:min-h-[400px]">
+            <Lottie
+              animationData={workManagementAnimation}
+              loop
+              className="w-full max-w-[480px] mx-auto"
+              aria-label="AI assistant and work management animation"
+            />
           </div>
         </div>
       </AnimatedSection>
 
       <AnimatedSection>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative bg-zinc-900 rounded-3xl border border-white/5 p-8 shadow-2xl hover:border-white/10 transition-all duration-500">
-            <div className="text-xs text-gray-500 mb-4">E-mail Sending..</div>
-            <div className="flex gap-3 mb-6">
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-white">LinkedIn</span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-500">IT services</span>
-              <span className="px-3 py-1 bg-[#a855f7]/20 border border-[#a855f7]/30 rounded-lg text-xs text-[#a855f7]">Founders</span>
-            </div>
-            <div className="space-y-3">
-              {[
-                { name: "Jack Daniel", company: "Xavier LLC", email: "justin@main.com" },
-                { name: "Gorge Chapel", company: "Chapel LLC", email: "gorge@mail.com" },
-                { name: "Mike Tylor", company: "CMB LLC", email: "mike@Cmb.com" },
-                { name: "Thomas Shelby", company: "Shelby.co", email: "Thomas@Sby.com" },
-              ].map((lead, i) => (
-                <div key={i} className="flex items-center justify-between p-3 bg-white/5 rounded-xl border border-white/5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#a855f7]/30 to-[#6366f1]/30 flex items-center justify-center text-xs text-white font-medium">{lead.name[0]}</div>
-                    <div>
-                      <div className="text-xs font-medium text-white">{lead.name}</div>
-                      <div className="text-[10px] text-gray-500">Founder · <span className="text-green-400">Verified</span></div>
-                    </div>
-                  </div>
-                  <div className="text-[10px] text-gray-500 text-right">
-                    <div>{lead.email}</div>
-                    <div>{lead.company}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="flex gap-4 mt-5">
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-400">Draft</span>
-              <span className="px-3 py-1 bg-[#a855f7] rounded-lg text-xs text-white">Schedule</span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-400">Sent</span>
-            </div>
+          <div className="relative flex items-center justify-center min-h-[320px] md:min-h-[400px]">
+            <Lottie
+              animationData={growthBusinessPullSalesAnimation}
+              loop
+              className="w-full max-w-[480px] mx-auto"
+              aria-label="Sales growth and business pull animation"
+            />
           </div>
           <div>
             <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-[#a855f7] mb-6">Sales & Marketing</div>
@@ -345,33 +292,13 @@ const Services = () => {
               <div className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white">Consulting</div>
             </div>
           </div>
-          <div className="order-1 md:order-2 relative bg-zinc-900 rounded-3xl border border-white/5 p-6 shadow-2xl hover:border-white/10 transition-all duration-500">
-            <p className="text-sm text-white mb-1">Hey David!</p>
-            <p className="text-xs text-gray-500 mb-5">Here is your Custom project & schedule</p>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-4 mb-5">
-              <div className="text-xs text-gray-500 mb-1">On going project :</div>
-              <div className="text-sm text-white font-medium mb-3">Customer Support Chatbot</div>
-              <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                <div className="w-[90%] h-full bg-[#a855f7] rounded-full transition-all duration-1000"></div>
-              </div>
-              <div className="text-[10px] text-gray-500 mt-1">90% Finished</div>
-            </div>
-            <div className="text-xs text-gray-500 mb-3">Schedule</div>
-            <div className="grid grid-cols-7 gap-1 mb-4">
-              {["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"].map((d) => (
-                <div key={d} className="text-center text-[10px] text-gray-500 py-1">{d}</div>
-              ))}
-            </div>
-            <div className="space-y-2">
-              <div className="p-3 bg-white/5 border border-white/10 rounded-xl">
-                <div className="text-xs text-white">Discovery call</div>
-                <div className="text-[10px] text-gray-500">10:00 am to 10:30 am</div>
-              </div>
-              <div className="p-3 bg-[#a855f7]/10 border border-[#a855f7]/20 rounded-xl">
-                <div className="text-xs text-white">Custom automation</div>
-                <div className="text-[10px] text-gray-500">06:00 pm to 06:30 pm</div>
-              </div>
-            </div>
+          <div className="order-1 md:order-2 relative flex items-center justify-center min-h-[320px] md:min-h-[420px]">
+            <Lottie
+              animationData={robotProcessAutomationAnimation}
+              loop
+              className="w-full max-w-[480px] mx-auto"
+              aria-label="Robot process automation animation"
+            />
           </div>
         </div>
       </AnimatedSection>
@@ -428,9 +355,16 @@ const CaseStudies = () => {
                 <div className="grid md:grid-cols-2 gap-8 items-stretch">
                   <div className="bg-zinc-900 rounded-3xl border border-white/5 overflow-hidden min-h-[400px] flex items-center justify-center relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#a855f7]/5 to-transparent"></div>
-                    <div className="relative z-10 p-8">
+                    <div className="relative z-10 p-8 w-full">
                       <div className="flex items-center gap-2 mb-4"><div className="w-6 h-6 bg-white rounded-full"></div><span className="text-white font-bold">Logoipsum</span></div>
-                      <div className="w-48 h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-2xl mx-auto border border-white/5"></div>
+                      <div className="w-full max-w-[280px] md:max-w-[320px] mx-auto min-h-[200px] flex items-center justify-center">
+                        <Lottie
+                          animationData={businessGoalPlanningAnimation}
+                          loop
+                          className="w-full"
+                          aria-label="Business goal planning animation"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="flex flex-col justify-center">

@@ -7,8 +7,8 @@ const PAYPAL_CURRENCY = process.env.NEXT_PUBLIC_PAYPAL_CURRENCY || "USD";
 const ENROLLMENT_FEE = process.env.NEXT_PUBLIC_ENROLLMENT_FEE || "49.00";
 const COMPANY_NAME = process.env.NEXT_PUBLIC_COMPANY_NAME || "TelivAI Solutions";
 const ITEM_NAME = process.env.NEXT_PUBLIC_ENROLLMENT_ITEM_NAME || "Career Enrollment Fee";
-const PAYPAL_LOCALE = process.env.NEXT_PUBLIC_PAYPAL_LOCALE || "en_US";
-const PAYPAL_ENABLE_FUNDING = process.env.NEXT_PUBLIC_PAYPAL_ENABLE_FUNDING || "venmo,card,paylater";
+const PAYPAL_LOCALE = process.env.NEXT_PUBLIC_PAYPAL_LOCALE || "";
+const PAYPAL_ENABLE_FUNDING = process.env.NEXT_PUBLIC_PAYPAL_ENABLE_FUNDING || "";
 const ENROLLMENT_STORAGE_KEY = "careerEnrollmentRecords";
 
 let paypalSdkPromise;

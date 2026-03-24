@@ -2,14 +2,32 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-const PAYPAL_CLIENT_ID = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "";
-const PAYPAL_CURRENCY = process.env.NEXT_PUBLIC_PAYPAL_CURRENCY || "USD";
-const ENROLLMENT_FEE = process.env.NEXT_PUBLIC_ENROLLMENT_FEE || "49.00";
-const COMPANY_NAME = process.env.NEXT_PUBLIC_COMPANY_NAME || "TelivAI Solutions";
-const ITEM_NAME = process.env.NEXT_PUBLIC_ENROLLMENT_ITEM_NAME || "Career Enrollment Fee";
-const PAYPAL_BACKEND_URL = process.env.NEXT_PUBLIC_PAYPAL_BACKEND_URL || "https://srinivas-consultancy.onrender.com";
-const PAYPAL_LOCALE = process.env.NEXT_PUBLIC_PAYPAL_LOCALE || "";
-const PAYPAL_ENABLE_FUNDING = process.env.NEXT_PUBLIC_PAYPAL_ENABLE_FUNDING || "";
+const env = import.meta.env || {};
+
+const PAYPAL_CLIENT_ID =
+  env.VITE_PAYPAL_CLIENT_ID || env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "";
+const PAYPAL_CURRENCY =
+  env.VITE_PAYPAL_CURRENCY || env.NEXT_PUBLIC_PAYPAL_CURRENCY || process.env.NEXT_PUBLIC_PAYPAL_CURRENCY || "USD";
+const ENROLLMENT_FEE =
+  env.VITE_ENROLLMENT_FEE || env.NEXT_PUBLIC_ENROLLMENT_FEE || process.env.NEXT_PUBLIC_ENROLLMENT_FEE || "49.00";
+const COMPANY_NAME =
+  env.VITE_COMPANY_NAME || env.NEXT_PUBLIC_COMPANY_NAME || process.env.NEXT_PUBLIC_COMPANY_NAME || "TelivAI Solutions";
+const ITEM_NAME =
+  env.VITE_ENROLLMENT_ITEM_NAME ||
+  env.NEXT_PUBLIC_ENROLLMENT_ITEM_NAME ||
+  process.env.NEXT_PUBLIC_ENROLLMENT_ITEM_NAME ||
+  "Career Enrollment Fee";
+const PAYPAL_BACKEND_URL =
+  env.VITE_PAYPAL_BACKEND_URL ||
+  env.NEXT_PUBLIC_PAYPAL_BACKEND_URL ||
+  process.env.NEXT_PUBLIC_PAYPAL_BACKEND_URL ||
+  "https://srinivas-consultancy.onrender.com";
+const PAYPAL_LOCALE = env.VITE_PAYPAL_LOCALE || env.NEXT_PUBLIC_PAYPAL_LOCALE || process.env.NEXT_PUBLIC_PAYPAL_LOCALE || "";
+const PAYPAL_ENABLE_FUNDING =
+  env.VITE_PAYPAL_ENABLE_FUNDING ||
+  env.NEXT_PUBLIC_PAYPAL_ENABLE_FUNDING ||
+  process.env.NEXT_PUBLIC_PAYPAL_ENABLE_FUNDING ||
+  "";
 const ENROLLMENT_STORAGE_KEY = "careerEnrollmentRecords";
 
 let paypalSdkPromise;

@@ -33,3 +33,23 @@ node server.js
 ```
 
 Server runs at `http://localhost:5001`.
+
+## Render Deployment
+
+Create a **Web Service** in Render and use:
+
+- Runtime: `Node`
+- Root Directory: `anything/backend/paypal-sandbox-express` (no leading slash)
+- Build Command: `npm install`
+- Start Command: `npm start`
+
+Add these Render environment variables:
+
+- `PORT=5001` (or leave empty and Render will inject one)
+- `PAYPAL_CLIENT_ID`
+- `PAYPAL_SECRET`
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_USER`
+- `SMTP_PASS`
+- Optional: `SMTP_SECURE`, `SMTP_FROM`

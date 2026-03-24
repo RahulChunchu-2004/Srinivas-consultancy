@@ -26,5 +26,5 @@ export function absoluteUrl(path: string): string {
 }
 
 export function defaultOgImageUrl(): string {
-  return absoluteUrl('/images/telivai-logo.png');
+  return absoluteUrl('/images/TelivAI.png');
 }

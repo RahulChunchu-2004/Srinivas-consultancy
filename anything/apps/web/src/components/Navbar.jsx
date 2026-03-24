@@ -109,13 +109,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between overflow-visible px-6 py-4">
-        <a href="/" className="flex h-10 shrink-0 items-center overflow-visible pr-1 sm:pr-6 md:pr-10 lg:pr-12">
+        <a href="/" className="flex h-14 shrink-0 items-center overflow-visible pr-1 sm:pr-6 md:pr-10 lg:pr-12">
           <img
-            src="/images/telivai-logo.png"
+            src="/images/TelivAI.png"
             alt="TelivAI Solutions"
-            className="block h-10 w-auto max-w-[260px] object-contain object-left origin-left scale-[2.55] sm:max-w-[300px] sm:scale-[2.75] md:max-w-[340px] md:scale-[2.95] lg:scale-[3.1]"
-            width={340}
-            height={54}
+            className="block h-14 w-auto max-w-[340px] object-contain object-left origin-left scale-[2.95] sm:max-w-[380px] sm:scale-[3.15] md:max-w-[420px] md:scale-[3.3] lg:scale-[3.45]"
+            width={420}
+            height={72}
           />
         </a>
 

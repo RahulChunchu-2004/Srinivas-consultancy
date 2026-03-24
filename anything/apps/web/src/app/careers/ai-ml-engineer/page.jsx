@@ -115,7 +115,7 @@ export default function AiMlEngineerPage() {
         <div className="bg-gradient-to-br from-zinc-900 to-black border border-[#a855f7]/20 rounded-2xl p-10 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Apply?</h2>
           <p className="text-zinc-400 mb-6">Take the next step in your career and join our AI/ML team.</p>
-          <a href="/careers/hiring-process" className="inline-block bg-[#a855f7] hover:bg-[#9333ea] text-white font-semibold px-8 py-3 rounded-full transition-colors">Apply Now</a>
+          <a href="/careers/hiring-process#enrollment" className="inline-block bg-[#a855f7] hover:bg-[#9333ea] text-white font-semibold px-8 py-3 rounded-full transition-colors">Enroll Now</a>
         </div>
       </AnimatedSection>
     </PageLayout>

@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import CareerEnrollmentForm from "@/components/CareerEnrollmentForm";
 import { FileText, Search, Users, Award, Rocket } from "lucide-react";
 import { pageMeta } from "@/app/seo/buildPageMeta";
 
@@ -137,54 +138,10 @@ export default function HiringProcessPage() {
             </form>
           </div>
 
-          <div className="bg-zinc-900/60 border border-[#a855f7]/20 rounded-2xl p-8">
+          <div id="enrollment" className="bg-zinc-900/60 border border-[#a855f7]/20 rounded-2xl p-8 scroll-mt-28">
             <h3 className="text-xl font-bold text-white mb-2">Contact HR & Submit Resume</h3>
             <p className="text-gray-400 text-sm mb-6">Questions? Reach us or upload your resume.</p>
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Full name"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-[#a855f7]/50 transition-colors"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-[#a855f7]/50 transition-colors"
-              />
-              <input
-                type="tel"
-                placeholder="Phone number"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-[#a855f7]/50 transition-colors"
-              />
-              <select className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-gray-400 text-sm focus:outline-none focus:border-[#a855f7]/50 transition-colors">
-                <option value="">Position applying for (select)</option>
-                <option value="ai-ml">AI/ML Engineer</option>
-                <option value="data">Data Engineer</option>
-                <option value="network">Network Engineer</option>
-                <option value="cybersecurity">Cyber Security Engineer</option>
-                <option value="ui-ux">UI/UX Designer</option>
-                <option value="java">Java Developer</option>
-                <option value="software">Software Developer</option>
-              </select>
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
-                <span className="text-gray-600 text-sm flex-1">Upload resume...</span>
-                <label className="cursor-pointer bg-white/10 hover:bg-white/20 text-gray-300 text-xs px-4 py-1.5 rounded-lg transition-colors">
-                  Browse
-                  <input type="file" className="hidden" accept=".pdf,.doc,.docx" />
-                </label>
-              </div>
-              <p className="text-xs text-gray-600">Accepted: .pdf, .doc, .docx — max 5MB</p>
-              <label className="flex items-start gap-2 text-xs text-gray-400 cursor-pointer">
-                <input type="checkbox" className="mt-0.5 accent-[#a855f7]" />
-                I agree to be contacted about this application and accept the privacy policy.
-              </label>
-              <button
-                type="submit"
-                className="w-full bg-[#a855f7] hover:bg-[#9333ea] text-white py-3 rounded-xl font-semibold transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]"
-              >
-                Submit Application
-              </button>
-            </form>
+            <CareerEnrollmentForm />
           </div>
         </div>
       </section>
